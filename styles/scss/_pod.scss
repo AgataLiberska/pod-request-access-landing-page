@@ -1,0 +1,88 @@
+.pod {
+    max-width: 33rem;
+    margin: auto;
+    padding: 0 1.5rem 5.75rem;
+    text-align: center;
+}
+
+.pod__heading {
+    max-width: 20.5rem;
+    padding-bottom: 1rem;
+    margin: auto;
+    font-size: 1.625rem;
+    font-weight: $font-normal;
+    text-transform: uppercase;
+    line-height: 2.375rem;
+    color: $green;
+
+    & span {
+        color: $white;
+    }
+}
+
+.pod__tagline {
+    padding-bottom: 2rem;
+    font-size: 0.9375rem;
+    font-weight: $font-normal;
+    line-height: 1.5rem;
+    color: $lightGray;
+}
+
+.pod__platforms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+}
+
+.pod__platforms__item {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.pod__platforms__link__icon {
+    height: auto;
+    max-width: 4.75rem;
+    object-fit: contain;
+}
+
+.pod__access-form__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem 2rem;
+    background-color: $darkGray;
+    border: 0;
+    border-radius: 1.75rem;
+    font-family: $font;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    font-weight: $font-bold;
+    color: $white;
+
+    &::placeholder {
+        color: $white;
+        opacity: 0.5;
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 5px 4px $gray;
+    }
+}
+
+.pod__access-form__submit {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    background-color: $green;
+    border: 0;
+    border-radius: 1.75rem;
+    font-family: $font;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    font-weight: $font-bolder;
+    color: $veryDarkGray;
+
+}
+

@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap");
+html {
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #121725;
+  background-image: url("/assets/mobile/image-host.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Chivo", sans-serif;
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #121725;
+  opacity: 0.95;
+  z-index: -1;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 3.5rem 0;
+}
+
+.pod {
+  max-width: 33rem;
+  margin: auto;
+  padding: 0 1.5rem 5.75rem;
+  text-align: center;
+}
+
+.pod__heading {
+  max-width: 20.5rem;
+  padding-bottom: 1rem;
+  margin: auto;
+  font-size: 1.625rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 2.375rem;
+  color: #54E6AF;
+}
+
+.pod__heading span {
+  color: #FFFFFF;
+}
+
+.pod__tagline {
+  padding-bottom: 2rem;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  color: #C2CBE5;
+}
+
+.pod__platforms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 2.5rem;
+}
+
+.pod__platforms__item {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.pod__platforms__link__icon {
+  height: auto;
+  max-width: 4.75rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.pod__access-form__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  background-color: #2C344B;
+  border: 0;
+  border-radius: 1.75rem;
+  font-family: "Chivo", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.pod__access-form__input::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input::placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 5px 4px #5A668A;
+          box-shadow: 0 0 5px 4px #5A668A;
+}
+
+.pod__access-form__submit {
+  width: 100%;
+  padding: 0.5rem 2rem;
+  background-color: #54E6AF;
+  border: 0;
+  border-radius: 1.75rem;
+  font-family: "Chivo", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #121725;
+}
+/*# sourceMappingURL=styles.css.map */
