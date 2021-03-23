@@ -21,6 +21,14 @@ body {
   font-family: "Chivo", sans-serif;
 }
 
+@media (min-width: 48rem) {
+  body {
+    background-image: url("/assets/tablet/image-host.jpg");
+    background-size: 65%;
+    background-position: top right;
+  }
+}
+
 body::after {
   content: '';
   position: absolute;
@@ -33,6 +41,17 @@ body::after {
   z-index: -1;
 }
 
+@media (min-width: 48rem) {
+  body::after {
+    top: unset;
+    left: 2rem;
+    height: 8rem;
+    background-color: none;
+    background-image: url("/assets/desktop/bg-pattern-dots.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -40,11 +59,28 @@ body::after {
   padding: 3.5rem 0;
 }
 
+@media (min-width: 48rem) {
+  .header {
+    place-items: start;
+    padding: 3rem 2.5rem 9.5rem;
+  }
+}
+
 .pod {
   max-width: 33rem;
   margin: auto;
   padding: 0 1.5rem 5.75rem;
   text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .pod {
+    max-width: 40rem;
+    margin: 0 2.5rem;
+    padding: 4.75rem 0;
+    background-color: #121725;
+    text-align: left;
+  }
 }
 
 .pod__heading {
@@ -62,12 +98,50 @@ body::after {
   color: #FFFFFF;
 }
 
+@media (min-width: 48rem) {
+  .pod__heading {
+    max-width: unset;
+    margin: 0;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
 .pod__tagline {
   padding-bottom: 2rem;
   font-size: 0.9375rem;
   font-weight: 300;
   line-height: 1.5rem;
   color: #C2CBE5;
+}
+
+@media (min-width: 48rem) {
+  .pod__tagline {
+    max-width: 27.75rem;
+    padding-bottom: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.pod__access__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 48rem) {
+  .pod__access__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .pod__platforms {
@@ -85,6 +159,12 @@ body::after {
   padding-bottom: 2.5rem;
 }
 
+@media (min-width: 48rem) {
+  .pod__platforms {
+    margin-right: 5.75rem;
+  }
+}
+
 .pod__platforms__item {
   display: block;
   padding: 0.5rem 0;
@@ -95,6 +175,22 @@ body::after {
   max-width: 4.75rem;
   -o-object-fit: contain;
      object-fit: contain;
+  opacity: 0.5;
+}
+
+@media (min-width: 48rem) {
+  .pod__platforms__link__icon {
+    max-width: 8rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .pod__access-form {
+    position: relative;
+    max-width: 26.7rem;
+    height: 3.5rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .pod__access-form__input {
@@ -110,6 +206,10 @@ body::after {
   line-height: 1.75rem;
   font-weight: 400;
   color: #FFFFFF;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in-out;
+  transition: -webkit-box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
 }
 
 .pod__access-form__input::-webkit-input-placeholder {
@@ -138,6 +238,13 @@ body::after {
           box-shadow: 0 0 5px 4px #5A668A;
 }
 
+@media (min-width: 48rem) {
+  .pod__access-form__input {
+    margin-bottom: unset;
+    padding: 0.875rem 12rem 0.875rem 2rem;
+  }
+}
+
 .pod__access-form__submit {
   width: 100%;
   padding: 0.5rem 2rem;
@@ -149,5 +256,33 @@ body::after {
   line-height: 1.75rem;
   font-weight: 700;
   color: #121725;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+}
+
+.pod__access-form__submit:hover {
+  background-color: #B3FFE2;
+}
+
+.pod__access-form__submit:focus {
+  outline: 0;
+  background-color: #B3FFE2;
+  -webkit-box-shadow: 0 0 5px 4px #54E6AF;
+          box-shadow: 0 0 5px 4px #54E6AF;
+}
+
+@media (min-width: 48rem) {
+  .pod__access-form__submit {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    right: 0.3125rem;
+    width: unset;
+    padding: 0.5625rem 1.75rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

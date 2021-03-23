@@ -18,6 +18,12 @@ body {
     background-repeat: no-repeat;
     font-family: $font;
 
+    @include breakpoint-up(medium) {
+        background-image: url('/assets/tablet/image-host.jpg');
+        background-size: 65%;
+        background-position: top right;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -28,6 +34,16 @@ body {
         background-color: $veryDarkGray;
         opacity: 0.95;
         z-index: -1;
+
+        @include breakpoint-up(medium) {
+            top: unset;
+            left: 2rem;
+            height: 8rem;
+            background-color: none;
+            background-image: url('/assets/desktop/bg-pattern-dots.svg');
+            background-repeat: no-repeat;
+            
+        }
     }
 }
 
