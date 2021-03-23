@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap");
+html {
+  font-size: 100%;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #121725;
+  background-image: url("/assets/mobile/image-host.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Chivo", sans-serif;
+}
+
+@media (min-width: 48rem) {
+  body {
+    background-image: url("/assets/tablet/image-host.jpg");
+    background-size: 65%;
+    background-position: top right;
+  }
+}
+
+@media (min-width: 90rem) {
+  body {
+    background-image: url("/assets/desktop/image-host.jpg");
+    background-position: center right;
+  }
+}
+
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #121725;
+  opacity: 0.95;
+  z-index: -1;
+}
+
+@media (min-width: 48rem) {
+  body::after {
+    top: unset;
+    left: 2rem;
+    height: 8rem;
+    background-color: transparent;
+    background-image: url("/assets/desktop/bg-pattern-dots.svg");
+    background-repeat: no-repeat;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 90rem) {
+  body::after {
+    bottom: 3rem;
+    background-position: center right;
+  }
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 3.5rem 0;
+}
+
+@media (min-width: 48rem) {
+  .header {
+    place-items: start;
+    padding: 3rem 2.5rem 9.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .header {
+    padding: 6.5rem 10.5rem;
+  }
+}
+
+.pod {
+  max-width: 33rem;
+  margin: auto;
+  padding: 0 1.5rem 5.75rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .pod {
+    max-width: 40rem;
+    margin: 0 2.5rem;
+    padding: 4.75rem 0 0 0;
+    background-color: #121725;
+    text-align: left;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pod {
+    max-width: 45.5rem;
+    margin: 0 10.5rem;
+    padding: 5.5rem 0 0 0;
+  }
+}
+
+.pod__heading {
+  max-width: 20.5rem;
+  padding-bottom: 1rem;
+  margin: auto;
+  font-size: 1.625rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 2.375rem;
+  color: #54E6AF;
+}
+
+.pod__heading span {
+  color: #FFFFFF;
+}
+
+@media (min-width: 48rem) {
+  .pod__heading {
+    max-width: unset;
+    margin: 0;
+    padding-bottom: 2rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pod__heading {
+    padding-bottom: 1.5rem;
+    font-size: 3.25rem;
+    line-height: 3.875rem;
+  }
+}
+
+.pod__tagline {
+  padding-bottom: 2rem;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  line-height: 1.5rem;
+  color: #C2CBE5;
+}
+
+@media (min-width: 48rem) {
+  .pod__tagline {
+    max-width: 27.75rem;
+    padding-bottom: 2.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
+.pod__access__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 48rem) {
+  .pod__access__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.pod__platforms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 48rem) {
+  .pod__platforms {
+    margin-right: 5.75rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pod__platforms {
+    max-width: 33.5rem;
+  }
+}
+
+.pod__platforms__item {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.pod__platforms__link__icon {
+  height: auto;
+  max-width: 4.75rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.5;
+}
+
+@media (min-width: 48rem) {
+  .pod__platforms__link__icon {
+    max-width: 8rem;
+  }
+}
+
+.pod__access-form {
+  text-align: left;
+}
+
+@media (min-width: 48rem) {
+  .pod__access-form {
+    position: relative;
+    max-width: 26.7rem;
+    height: 4.875rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.pod__access-form__input {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.25rem;
+  padding: 0.5rem 2rem;
+  background-color: #2C344B;
+  border: 0;
+  border-radius: 1.75rem;
+  font-family: "Chivo", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  -webkit-transition: -webkit-box-shadow 200ms ease-in-out;
+  transition: -webkit-box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out;
+  transition: box-shadow 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+}
+
+.pod__access-form__input::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input:-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input::-ms-input-placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input::placeholder {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+
+.pod__access-form__input:focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 5px 4px #5A668A;
+          box-shadow: 0 0 5px 4px #5A668A;
+}
+
+@media (min-width: 48rem) {
+  .pod__access-form__input {
+    margin-bottom: 0.5rem;
+    padding: 0.875rem 12rem 0.875rem 2rem;
+  }
+}
+
+.pod__access-form__submit {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.5rem 2rem;
+  background-color: #54E6AF;
+  border: 0;
+  border-radius: 1.75rem;
+  font-family: "Chivo", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #121725;
+  cursor: pointer;
+  -webkit-transition: background-color 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out, -webkit-box-shadow 200ms ease-in-out;
+}
+
+.pod__access-form__submit:hover {
+  background-color: #B3FFE2;
+}
+
+.pod__access-form__submit:focus {
+  outline: 0;
+  background-color: #B3FFE2;
+  -webkit-box-shadow: 0 0 5px 4px #54E6AF;
+          box-shadow: 0 0 5px 4px #54E6AF;
+}
+
+@media (min-width: 48rem) {
+  .pod__access-form__submit {
+    margin-top: unset;
+    position: absolute;
+    top: 0.3125rem;
+    right: 0.3125rem;
+    width: unset;
+    padding: 0.5625rem 1.75rem;
+  }
+}
+
+.pod__access-form__error {
+  display: block;
+  margin-left: 2rem;
+  font-size: 0.75rem;
+  line-height: 0.8175rem;
+  color: #FB3E3E;
+}
+
+.pod__access-form__error.hidden {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */

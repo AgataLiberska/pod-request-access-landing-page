@@ -1,0 +1,196 @@
+.pod {
+    max-width: 33rem;
+    margin: auto;
+    padding: 0 1.5rem 5.75rem;
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+        max-width: 40rem;
+        margin: 0 2.5rem;
+        padding: 4.75rem 0 0 0;
+        background-color: $veryDarkGray;
+        text-align: left;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 45.5rem;
+        margin: 0 10.5rem;
+        padding: 5.5rem 0 0 0;
+    }
+}
+
+.pod__heading {
+    max-width: 20.5rem;
+    padding-bottom: 1rem;
+    margin: auto;
+    font-size: 1.625rem;
+    font-weight: $font-normal;
+    text-transform: uppercase;
+    line-height: 2.375rem;
+    color: $green;
+
+    & span {
+        color: $white;
+    }
+
+    @include breakpoint-up(medium) {
+        max-width: unset;
+        margin: 0;
+        padding-bottom: 2rem;
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding-bottom: 1.5rem;
+        font-size: 3.25rem;
+        line-height: 3.875rem;
+    }
+}
+
+.pod__tagline {
+    padding-bottom: 2rem;
+    font-size: 0.9375rem;
+    font-weight: $font-normal;
+    line-height: 1.5rem;
+    color: $lightGray;
+
+    @include breakpoint-up(medium) {
+        max-width: 27.75rem;
+        padding-bottom: 2.5rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+}
+
+.pod__access__container {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-up(medium) {
+        flex-direction: column-reverse;
+    }
+}
+
+.pod__platforms {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom: 2.5rem;
+
+    @include breakpoint-up(medium) {
+        margin-right: 5.75rem;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 33.5rem;
+    }
+}
+
+.pod__platforms__item {
+    display: block;
+    padding: 0.5rem 0;
+}
+
+.pod__platforms__link__icon {
+    height: auto;
+    max-width: 4.75rem;
+    object-fit: contain;
+    opacity: 0.5;
+
+    @include breakpoint-up(medium) {
+        max-width: 8rem;
+    }
+}
+
+.pod__access-form {
+    text-align: left;
+
+    @include breakpoint-up(medium) {
+        position: relative;
+        max-width: 26.7rem;
+        height: 4.875rem;
+        margin-bottom: 4rem;
+    }
+}
+
+.pod__access-form__input {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25rem;
+    padding: 0.5rem 2rem;
+    background-color: $darkGray;
+    border: 0;
+    border-radius: 1.75rem;
+    font-family: $font;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    font-weight: $font-bold;
+    color: $white;
+    transition: box-shadow 200ms ease-in-out;
+
+    &::placeholder {
+        color: $white;
+        opacity: 0.5;
+    }
+
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 5px 4px $gray;
+    }
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 0.5rem;
+        padding: 0.875rem 12rem 0.875rem 2rem;
+    }
+}
+
+.pod__access-form__submit {
+    width: 100%;
+    margin-top: 0.75rem;
+    padding: 0.5rem 2rem;
+    background-color: $green;
+    border: 0;
+    border-radius: 1.75rem;
+    font-family: $font;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+    font-weight: $font-bolder;
+    color: $veryDarkGray;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+
+    &:hover {
+        background-color: $lightGreen;
+    }
+
+    &:focus {
+        outline: 0;
+        background-color: $lightGreen;
+        box-shadow: 0 0 5px 4px $green;
+    }
+
+
+    @include breakpoint-up(medium) {
+        margin-top: unset;
+        position: absolute;
+        top: 0.3125rem;
+        right: 0.3125rem;
+        width: unset;
+        padding: 0.5625rem 1.75rem;
+    }
+}
+
+.pod__access-form__error {
+    display: block;
+    margin-left: 2rem;
+    font-size: 0.75rem;
+    line-height: 0.8175rem;
+    color: $red;
+
+    &.hidden {
+        display: none;
+    }
+}
+
