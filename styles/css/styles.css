@@ -29,6 +29,13 @@ body {
   }
 }
 
+@media (min-width: 90rem) {
+  body {
+    background-image: url("/assets/desktop/image-host.jpg");
+    background-position: center right;
+  }
+}
+
 body::after {
   content: '';
   position: absolute;
@@ -46,9 +53,17 @@ body::after {
     top: unset;
     left: 2rem;
     height: 8rem;
-    background-color: none;
+    background-color: transparent;
     background-image: url("/assets/desktop/bg-pattern-dots.svg");
     background-repeat: no-repeat;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 90rem) {
+  body::after {
+    bottom: 3rem;
+    background-position: center right;
   }
 }
 
@@ -66,6 +81,12 @@ body::after {
   }
 }
 
+@media (min-width: 90rem) {
+  .header {
+    padding: 6.5rem 10.5rem;
+  }
+}
+
 .pod {
   max-width: 33rem;
   margin: auto;
@@ -80,6 +101,14 @@ body::after {
     padding: 4.75rem 0 0 0;
     background-color: #121725;
     text-align: left;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pod {
+    max-width: 45.5rem;
+    margin: 0 10.5rem;
+    padding: 5.5rem 0 0 0;
   }
 }
 
@@ -105,6 +134,14 @@ body::after {
     padding-bottom: 2rem;
     font-size: 3rem;
     line-height: 3.5rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pod__heading {
+    padding-bottom: 1.5rem;
+    font-size: 3.25rem;
+    line-height: 3.875rem;
   }
 }
 
@@ -162,6 +199,12 @@ body::after {
 @media (min-width: 48rem) {
   .pod__platforms {
     margin-right: 5.75rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .pod__platforms {
+    max-width: 33.5rem;
   }
 }
 

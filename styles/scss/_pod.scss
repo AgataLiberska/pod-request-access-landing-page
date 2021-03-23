@@ -11,6 +11,12 @@
         background-color: $veryDarkGray;
         text-align: left;
     }
+
+    @include breakpoint-up(large) {
+        max-width: 45.5rem;
+        margin: 0 10.5rem;
+        padding: 5.5rem 0 0 0;
+    }
 }
 
 .pod__heading {
@@ -33,6 +39,12 @@
         padding-bottom: 2rem;
         font-size: 3rem;
         line-height: 3.5rem;
+    }
+
+    @include breakpoint-up(large) {
+        padding-bottom: 1.5rem;
+        font-size: 3.25rem;
+        line-height: 3.875rem;
     }
 }
 
@@ -69,6 +81,10 @@
 
     @include breakpoint-up(medium) {
         margin-right: 5.75rem;
+    }
+
+    @include breakpoint-up(large) {
+        max-width: 33.5rem;
     }
 }
 

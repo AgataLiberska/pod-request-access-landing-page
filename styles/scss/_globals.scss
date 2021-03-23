@@ -24,6 +24,11 @@ body {
         background-position: top right;
     }
 
+    @include breakpoint-up(large) {
+        background-image: url('/assets/desktop/image-host.jpg');
+        background-position: center right;
+    }
+
     &::after {
         content: '';
         position: absolute;
@@ -39,10 +44,15 @@ body {
             top: unset;
             left: 2rem;
             height: 8rem;
-            background-color: none;
+            background-color: transparent;
             background-image: url('/assets/desktop/bg-pattern-dots.svg');
             background-repeat: no-repeat;
-            
+            opacity: 1;
+        }
+
+        @include breakpoint-up(large) {
+            bottom: 3rem;
+            background-position: center right;
         }
     }
 }
