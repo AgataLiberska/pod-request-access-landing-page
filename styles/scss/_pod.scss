@@ -105,10 +105,12 @@
 }
 
 .pod__access-form {
+    text-align: left;
+
     @include breakpoint-up(medium) {
         position: relative;
         max-width: 26.7rem;
-        height: 3.5rem;
+        height: 4.875rem;
         margin-bottom: 4rem;
     }
 }
@@ -116,7 +118,7 @@
 .pod__access-form__input {
     display: block;
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;
     padding: 0.5rem 2rem;
     background-color: $darkGray;
     border: 0;
@@ -139,13 +141,14 @@
     }
 
     @include breakpoint-up(medium) {
-        margin-bottom: unset;
+        margin-bottom: 0.5rem;
         padding: 0.875rem 12rem 0.875rem 2rem;
     }
 }
 
 .pod__access-form__submit {
     width: 100%;
+    margin-top: 0.75rem;
     padding: 0.5rem 2rem;
     background-color: $green;
     border: 0;
@@ -170,13 +173,24 @@
 
 
     @include breakpoint-up(medium) {
+        margin-top: unset;
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0.3125rem;
         right: 0.3125rem;
         width: unset;
         padding: 0.5625rem 1.75rem;
     }
+}
 
+.pod__access-form__error {
+    display: block;
+    margin-left: 2rem;
+    font-size: 0.75rem;
+    line-height: 0.8175rem;
+    color: $red;
+
+    &.hidden {
+        display: none;
+    }
 }
 
