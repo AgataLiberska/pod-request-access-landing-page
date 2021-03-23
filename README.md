@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution:](https://your-solution-url.com)
-- [Live Site:](https://pod-request-access-landing-page-seven.vercel.app/)
+- [View the solution on Frontend Mentor](https://www.frontendmentor.io/solutions/mobile-first-scss-vanilla-js-simple-form-validation-4Hp2Wf92c)
+- [View the live site](https://pod-request-access-landing-page-seven.vercel.app/)
 
 ## My process
 
@@ -51,6 +51,8 @@ Users should be able to:
 In this project, I got a chance to put my knowledge of Flexbox to position platform logos, as well as to change the order in which the form appears on the page.
 
 I added `viewBox` property to the SVG files to make resizing easier.
+
+I also added custom focus styles to the input field and submit button.
 
 ## Author
 
